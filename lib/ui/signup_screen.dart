@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:final_ui/ui/signin_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override
@@ -224,11 +225,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                   validator: (String? value) {
                     if (value!.isEmpty) {
-                      return "Please enter email";
+                      return "Please enter you phone number";
                     }
-                    if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+[a-z]")
+                    if (!RegExp('(?:(?:\\+|00)88|01)?\\d{11}')
                         .hasMatch(value)) {
-                      return "Please enter valid email";
+                      return "Please enter valid phone number";
                     }
                     return null;
                   },
@@ -418,7 +419,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
               Container(
                 alignment: Alignment.center,
-                margin: const EdgeInsets.only(top: 20),
+                margin: const EdgeInsets.only(top: 20, left: 40, right: 40),
                 child: MaterialButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
@@ -431,21 +432,45 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   color: Color(0xff4048BF),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
-                  child: Container(
-                    alignment: Alignment.center,
-                    height: 35,
-                    width: 300,
-                    margin: const EdgeInsets.only(top: 8, bottom: 8),
-                    child: const Text(
-                      "Sign up",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w400,
-                          fontFamily: "Questrial",
-                          fontStyle: FontStyle.normal,
-                          fontSize: 16),
-                      textAlign: TextAlign.center,
-                    ),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 8,
+                        child: Container(
+                          alignment: Alignment.center,
+                          margin: const EdgeInsets.only(top: 16, left: 60, bottom: 16),
+                          child: const Text(
+                            "Sign up",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: "Questrial",
+                                fontStyle: FontStyle.normal,
+                                fontSize: 16),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      margin: EdgeInsets.only(left: 10),
+                      //alignment: Alignment.centerRight,
+                      child: const Icon(Icons.arrow_forward,
+                        color: Colors.white,),
+                    )
+                  ),
+                      Expanded(
+                          flex: 1,
+                          child: Container(
+                            margin: EdgeInsets.only(right: 15),
+                            //alignment: Alignment.centerRight,
+                            child: Image(
+                              image: AssetImage("assets/].png"),
+                            )
+                          )
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -476,12 +501,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               ),
                               recognizer: TapGestureRecognizer()
                                 ..onTap = () {
-                                  // Navigator.push(
-                                  //   context,
-                                  //   MaterialPageRoute(
-                                  //       builder: (context) => SignUp()),
-                                  // );
-                                  //WidgetSpan(child: Icon(Icons.add,color: Colors.white,));
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => SignInScreen()),
+                                  );
                                 }),
                         ]),
                   ),

@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:final_ui/ui/otpInput_screen.dart';
+import 'package:final_ui/ui/otp_pin.dart';
+
+import 'otp_pin.dart';
 
 class SignInScreen extends StatefulWidget {
   @override
@@ -126,7 +128,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => OtpInputScreen()),
+                            builder: (context) => PinCodeVerificationScreen()),
                       );
                     },
                     color: Color(0xff4048BF),
@@ -203,7 +205,7 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               Container(
                 margin: EdgeInsets.only(top: 8),
-                child: Text(
+                child: const Text(
                   "Terms of Service & Privacy Policy",
                   style: TextStyle(
                     fontFamily: 'Questrial',

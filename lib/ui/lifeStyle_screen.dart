@@ -13,14 +13,6 @@ class _LifeStyleScreenState extends State<LifeStyleScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        backgroundColor: Color(0xff575DB7),
-        elevation: 0.0,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_outlined, color: Colors.white),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-      ),
       body: SingleChildScrollView(
         child: Container(
           child: Column(
@@ -35,7 +27,7 @@ class _LifeStyleScreenState extends State<LifeStyleScreen> {
                     ),
                   ),
                   Positioned(
-                    right: 0,
+                    right: 16,
                     top: 160,
                     child: Container(
                       height: 160,
@@ -52,44 +44,42 @@ class _LifeStyleScreenState extends State<LifeStyleScreen> {
                 child: const Text(
                   "Lifestyle",
                   style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: 'Questrial',
-                    fontSize: 32,
-                    fontWeight: FontWeight.w400,
-                    fontStyle: FontStyle.normal
-                  ),
+                      color: Colors.white,
+                      fontFamily: 'Questrial',
+                      fontSize: 32,
+                      fontWeight: FontWeight.w400,
+                      fontStyle: FontStyle.normal),
                 ),
               ),
               Container(
                 alignment: Alignment.topLeft,
                 margin: EdgeInsets.only(top: 20, left: 12),
-              //  height: 30,
+                //  height: 30,
                 child: Row(
                   children: [
                     Expanded(
-                        flex: 1,
-                        child: Container(
-                          height: 40,
-                          child: const Image(
-                            image: AssetImage("assets/offer.png"),
-                          ),
+                      flex: 1,
+                      child: Container(
+                        height: 40,
+                        child: const Image(
+                          image: AssetImage("assets/offer.png"),
                         ),
+                      ),
                     ),
                     Expanded(
                       flex: 5,
-                        child: Container(
-                          height: 15,
-                          child: const Text(
-                            "Exclusive offers and discounts",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'Questrial',
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                fontStyle: FontStyle.normal
-                            ),
-                          ),
-                    ),
+                      child: Container(
+                        height: 15,
+                        child: const Text(
+                          "Exclusive offers and discounts",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'Questrial',
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              fontStyle: FontStyle.normal),
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -119,8 +109,7 @@ class _LifeStyleScreenState extends State<LifeStyleScreen> {
                               fontFamily: 'Questrial',
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
-                              fontStyle: FontStyle.normal
-                          ),
+                              fontStyle: FontStyle.normal),
                         ),
                       ),
                     ),
@@ -152,8 +141,7 @@ class _LifeStyleScreenState extends State<LifeStyleScreen> {
                               fontFamily: 'Questrial',
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
-                              fontStyle: FontStyle.normal
-                          ),
+                              fontStyle: FontStyle.normal),
                         ),
                       ),
                     ),

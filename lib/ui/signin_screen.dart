@@ -1,8 +1,8 @@
+import 'package:final_ui/ui/lifeStyle_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:final_ui/ui/otp_pin.dart';
-
 import 'otp_pin.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -61,7 +61,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
               ),
               Container(
-               // alignment: Alignment.center,
+                // alignment: Alignment.center,
                 margin: EdgeInsets.only(top: 45, left: 50),
                 child: Center(
                   child: Row(
@@ -216,127 +216,127 @@ class _SignInScreenState extends State<SignInScreen> {
                   ),
                 ),
               ),
-              Center(
-                child: Container(
-                  margin: EdgeInsets.only(top: 82),
-                  child: const Text(
-                    "Or",
-                    style: TextStyle(
-                      fontFamily: 'Questrial',
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      fontStyle: FontStyle.normal,
-                    ),
-                  ),
-                ),
-              ),
+              // Center(
+              //   child: Container(
+              //     margin: EdgeInsets.only(top: 82),
+              //     child: const Text(
+              //       "Or",
+              //       style: TextStyle(
+              //         fontFamily: 'Questrial',
+              //         color: Colors.white,
+              //         fontSize: 16,
+              //         fontWeight: FontWeight.w500,
+              //         fontStyle: FontStyle.normal,
+              //       ),
+              //     ),
+              //   ),
+              // ),
 
-              Container(
-                margin: const EdgeInsets.only(top: 30, left: 50, right: 50,),
-                padding: const EdgeInsets.only(top: 10, bottom: 10),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(6),
-                    border: Border.all(color: Colors.white)
-                ),
-                child: Row(
-                  children: [
-                    Expanded(
-                    flex: 1,
-                    child: Container(
-                      height: 20,
-                      margin: EdgeInsets.only(left: 10),
-                      child: const Image(
-                        image: AssetImage("assets/Gmail.png"),
-                      ),
-                    ),
-                  ),
-                    Spacer(),
-                    const Expanded(
-                      flex: 5,
-                      child: Text('Continue with Email',
-                        style: TextStyle(
-                          fontFamily: 'Questrial',
-                          color: Colors.white,
-                          fontSize: 13,
-                          fontWeight: FontWeight.w400,
-                          fontStyle: FontStyle.normal,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.only(top: 10, left: 50, right: 50),
-                padding: const EdgeInsets.only(top: 10, bottom: 10),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(6),
-                    border: Border.all(color: Colors.white)
-                ),
-                child: Row(
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        height: 20,
-                        margin: EdgeInsets.only(left: 10),
-                        child: const Image(
-                          image: AssetImage("assets/Facebook.png"),
-                        ),
-                      ),
-                    ),
-                    Spacer(),
-                    const Expanded(
-                      flex: 5,
-                      child: Text('Continue with Facebook',
-                        style: TextStyle(
-                          fontFamily: 'Questrial',
-                          color: Colors.white,
-                          fontSize: 13,
-                          fontWeight: FontWeight.w400,
-                          fontStyle: FontStyle.normal,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.only(top: 10, left: 50, right: 50),
-                padding: const EdgeInsets.only(top: 5, bottom: 5),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(6),
-                    border: Border.all(color: Colors.white)
-                ),
-                child: Row(
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        height: 30,
-                        margin: EdgeInsets.only(left: 10),
-                        child: const Image(
-                          image: AssetImage("assets/Google.png"),
-                        ),
-                      ),
-                    ),
-                    Spacer(),
-                    const Expanded(
-                      flex: 5,
-                      child: Text('Continue with Google',
-                        style: TextStyle(
-                          fontFamily: 'Questrial',
-                          color: Colors.white,
-                          fontSize: 13,
-                          fontWeight: FontWeight.w400,
-                          fontStyle: FontStyle.normal,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              )
+              // Container(
+              //   margin: const EdgeInsets.only(top: 30, left: 50, right: 50,),
+              //   padding: const EdgeInsets.only(top: 10, bottom: 10),
+              //   decoration: BoxDecoration(
+              //       borderRadius: BorderRadius.circular(6),
+              //       border: Border.all(color: Colors.white)
+              //   ),
+              //   child: Row(
+              //     children: [
+              //       Expanded(
+              //       flex: 1,
+              //       child: Container(
+              //         height: 20,
+              //         margin: EdgeInsets.only(left: 10),
+              //         child: const Image(
+              //           image: AssetImage("assets/Gmail.png"),
+              //         ),
+              //       ),
+              //     ),
+              //       Spacer(),
+              //       const Expanded(
+              //         flex: 5,
+              //         child: Text('Continue with Email',
+              //           style: TextStyle(
+              //             fontFamily: 'Questrial',
+              //             color: Colors.white,
+              //             fontSize: 13,
+              //             fontWeight: FontWeight.w400,
+              //             fontStyle: FontStyle.normal,
+              //           ),
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              // Container(
+              //   margin: const EdgeInsets.only(top: 10, left: 50, right: 50),
+              //   padding: const EdgeInsets.only(top: 10, bottom: 10),
+              //   decoration: BoxDecoration(
+              //       borderRadius: BorderRadius.circular(6),
+              //       border: Border.all(color: Colors.white)
+              //   ),
+              //   child: Row(
+              //     children: [
+              //       Expanded(
+              //         flex: 1,
+              //         child: Container(
+              //           height: 20,
+              //           margin: EdgeInsets.only(left: 10),
+              //           child: const Image(
+              //             image: AssetImage("assets/Facebook.png"),
+              //           ),
+              //         ),
+              //       ),
+              //       Spacer(),
+              //       const Expanded(
+              //         flex: 5,
+              //         child: Text('Continue with Facebook',
+              //           style: TextStyle(
+              //             fontFamily: 'Questrial',
+              //             color: Colors.white,
+              //             fontSize: 13,
+              //             fontWeight: FontWeight.w400,
+              //             fontStyle: FontStyle.normal,
+              //           ),
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              // Container(
+              //   margin: const EdgeInsets.only(top: 10, left: 50, right: 50),
+              //   padding: const EdgeInsets.only(top: 5, bottom: 5),
+              //   decoration: BoxDecoration(
+              //       borderRadius: BorderRadius.circular(6),
+              //       border: Border.all(color: Colors.white)
+              //   ),
+              //   child: Row(
+              //     children: [
+              //       Expanded(
+              //         flex: 1,
+              //         child: Container(
+              //           height: 30,
+              //           margin: EdgeInsets.only(left: 10),
+              //           child: const Image(
+              //             image: AssetImage("assets/Google.png"),
+              //           ),
+              //         ),
+              //       ),
+              //       Spacer(),
+              //       const Expanded(
+              //         flex: 5,
+              //         child: Text('Continue with Google',
+              //           style: TextStyle(
+              //             fontFamily: 'Questrial',
+              //             color: Colors.white,
+              //             fontSize: 13,
+              //             fontWeight: FontWeight.w400,
+              //             fontStyle: FontStyle.normal,
+              //           ),
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // )
             ],
           ),
         ),

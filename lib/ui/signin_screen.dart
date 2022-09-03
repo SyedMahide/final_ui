@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:final_ui/ui/otp_pin.dart';
-
 import 'otp_pin.dart';
 
 class SignInScreen extends StatefulWidget {

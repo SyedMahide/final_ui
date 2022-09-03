@@ -4,6 +4,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/services.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:flutter/material.dart';
+import 'package:final_ui/ui/lifeStyle_screen.dart';
 
 class PinCodeVerificationScreen extends StatefulWidget {
   final String? phoneNumber;
@@ -192,9 +193,6 @@ class _PinCodeVerificationScreenState extends State<PinCodeVerificationScreen> {
                                     },
                                     beforeTextPaste: (text) {
                                       debugPrint("Allowing to paste $text");
-                                      //if you return true then it will show the paste confirmation dialog.
-                                      //Otherwise if false, then nothing will happen.
-                                      //but you can show anything you want here, like your pop up saying wrong paste format or etc
                                       return true;
                                     },
                                   )),
@@ -225,11 +223,11 @@ class _PinCodeVerificationScreenState extends State<PinCodeVerificationScreen> {
                                           ),
                                           recognizer: TapGestureRecognizer()
                                             ..onTap = () {
-                                              // Navigator.push(
-                                              //   context,
-                                              //   MaterialPageRoute(
-                                              //       builder: (context) => SignInScreen()),
-                                              // );
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) => LifeStyleScreen()),
+                                              );
                                             }),
                                     ]),
                               ),

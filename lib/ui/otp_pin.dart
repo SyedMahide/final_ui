@@ -310,25 +310,27 @@ class _PinCodeVerificationScreenState extends State<PinCodeVerificationScreen> {
                                 ),
                               ),
                             ),
+                            Center(
+                              child: Container(
+                                alignment: Alignment.center,
+                                margin: EdgeInsets.only(top: 30, left: 44),
+                                child: const Text(
+                                  "Verifying your OTP Code.....",
+                                  style: TextStyle(
+                                      fontFamily: 'Questrial',
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                      fontStyle: FontStyle.normal,
+                                      color: Colors.white),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ),
                           ],
-
                         ),
                       ),
                     ),
                   ],
-                ),
-                Container(
-                  alignment: Alignment.center,
-                  margin: EdgeInsets.only(top: 30),
-                  child: const Text(
-                    "Verifing Your OTP Code",
-                    style: TextStyle(
-                        fontFamily: 'Questrial',
-                        fontSize: 24,
-                        fontWeight: FontWeight.w400,
-                        fontStyle: FontStyle.normal,
-                        color: Colors.white),
-                  ),
                 ),
               ],
             ),

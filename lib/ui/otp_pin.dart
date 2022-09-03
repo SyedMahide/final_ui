@@ -115,14 +115,14 @@ class _PinCodeVerificationScreenState extends State<PinCodeVerificationScreen> {
                     SizedBox(
                       width: 280,
                       child: Container(
-                       // alignment: Alignment.topLeft,
+                        // alignment: Alignment.topLeft,
                         height: MediaQuery.of(context).size.height,
                         width: 250,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                             Container(
-                               alignment: Alignment.topLeft,
+                            Container(
+                              alignment: Alignment.topLeft,
                               margin: EdgeInsets.only(left: 28),
                               height: 40,
                             ),
@@ -142,7 +142,8 @@ class _PinCodeVerificationScreenState extends State<PinCodeVerificationScreen> {
                                     ),
                                     length: 4,
                                     obscureText: false,
-                                    textStyle: const TextStyle(color: Colors.white),
+                                    textStyle:
+                                        const TextStyle(color: Colors.white),
                                     blinkWhenObscuring: true,
                                     animationType: AnimationType.fade,
                                     validator: (v) {
@@ -181,6 +182,12 @@ class _PinCodeVerificationScreenState extends State<PinCodeVerificationScreen> {
                                     ],
                                     onCompleted: (v) {
                                       debugPrint("Completed");
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                LifeStyleScreen()),
+                                      );
                                     },
                                     // onTap: () {
                                     //   print("Pressed");
@@ -213,117 +220,110 @@ class _PinCodeVerificationScreenState extends State<PinCodeVerificationScreen> {
                                     ),
                                     children: [
                                       TextSpan(
-                                          text: "Send again",
-                                          style: const TextStyle(
-                                            fontFamily: 'Questrial',
-                                            color: Color(0xff1877F2),
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w600,
-                                            fontStyle: FontStyle.normal,
-                                          ),
-                                          recognizer: TapGestureRecognizer()
-                                            ..onTap = () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) => LifeStyleScreen()),
-                                              );
-                                            }),
+                                        text: "Send again",
+                                        style: const TextStyle(
+                                          fontFamily: 'Questrial',
+                                          color: Color(0xff1877F2),
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w600,
+                                          fontStyle: FontStyle.normal,
+                                        ),
+                                      ),
                                     ]),
                               ),
                             ),
 
-                            Container(
-                              margin: EdgeInsets.only(top: 10, left: 28),
-                              child: Center(
-                                child: ElevatedButton(
-                                  onPressed: () {
-                                    showDialog(
-                                      context: context,
-                                      builder: (ctx) => AlertDialog(
-                                        backgroundColor: Colors.black,
-                                        title: const Text(
-                                          "Allow the application to read the messege and enter the code",
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              fontFamily: 'Questrial',
-                                              color: Colors.white),
-                                        ),
-                                        content: const Text(
-                                          "Code 2420 for confirmation in the aplication",
-                                          style: TextStyle(
-                                              fontSize: 14,
-                                              fontFamily: 'Questrial',
-                                              color: Colors.white),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                        actions: <Widget>[
-                                          Row(
-                                            children: [
-                                              Expanded(
-                                                flex: 1,
-                                                child: TextButton(
-                                                  onPressed: () {
-                                                    Navigator.of(ctx).pop();
-                                                  },
-                                                  child: Container(
-                                                    //alignment: Alignment.topRight,
-                                                    // color: Color(0xff4048BF),
-                                                    padding: const EdgeInsets.only(
-                                                        top: 10, right: 50, left: 5,  bottom: 10),
-                                                    child: const Text(
-                                                      "Reject",
-                                                      style: TextStyle(color: Colors.white),
-                                                      textAlign: TextAlign.center,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                              Expanded(
-                                                flex: 1,
-                                                child: TextButton(
-                                                  onPressed: () {
-                                                    Navigator.of(ctx).pop();
-                                                  },
-                                                  child: Container(
-                                                    // decoration: BoxDecoration,
-                                                    alignment: Alignment.topLeft,
-                                                    color: Color(0xff4048BF),
-                                                    padding: const EdgeInsets.only(
-                                                        top: 10, left: 50,  bottom: 10),
-                                                    child: const Text(
-                                                      "Allow",
-                                                      style: TextStyle(color: Colors.white),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    );
-                                  },
-                                  child: const Text("Show alert Dialog box"),
-                                ),
-                              ),
-                            ),
-                            Center(
-                              child: Container(
-                                alignment: Alignment.center,
-                                margin: EdgeInsets.only(top: 30, left: 44),
-                                child: const Text(
-                                  "Verifying your OTP Code.....",
-                                  style: TextStyle(
-                                      fontFamily: 'Questrial',
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500,
-                                      fontStyle: FontStyle.normal,
-                                      color: Colors.white),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
-                            ),
+                            // Container(
+                            //   margin: EdgeInsets.only(top: 10, left: 28),
+                            //   child: Center(
+                            //     child: ElevatedButton(
+                            //       onPressed: () {
+                            //         showDialog(
+                            //           context: context,
+                            //           builder: (ctx) => AlertDialog(
+                            //             backgroundColor: Colors.black,
+                            //             title: const Text(
+                            //               "Allow the application to read the messege and enter the code",
+                            //               style: TextStyle(
+                            //                   fontSize: 16,
+                            //                   fontFamily: 'Questrial',
+                            //                   color: Colors.white),
+                            //             ),
+                            //             content: const Text(
+                            //               "Code 2420 for confirmation in the aplication",
+                            //               style: TextStyle(
+                            //                   fontSize: 14,
+                            //                   fontFamily: 'Questrial',
+                            //                   color: Colors.white),
+                            //               textAlign: TextAlign.center,
+                            //             ),
+                            //             actions: <Widget>[
+                            //               Row(
+                            //                 children: [
+                            //                   Expanded(
+                            //                     flex: 1,
+                            //                     child: TextButton(
+                            //                       onPressed: () {
+                            //                         Navigator.of(ctx).pop();
+                            //                       },
+                            //                       child: Container(
+                            //                         //alignment: Alignment.topRight,
+                            //                         // color: Color(0xff4048BF),
+                            //                         padding: const EdgeInsets.only(
+                            //                             top: 10, right: 50, left: 5,  bottom: 10),
+                            //                         child: const Text(
+                            //                           "Reject",
+                            //                           style: TextStyle(color: Colors.white),
+                            //                           textAlign: TextAlign.center,
+                            //                         ),
+                            //                       ),
+                            //                     ),
+                            //                   ),
+                            //                   Expanded(
+                            //                     flex: 1,
+                            //                     child: TextButton(
+                            //                       onPressed: () {
+                            //                         Navigator.of(ctx).pop();
+                            //                       },
+                            //                       child: Container(
+                            //                         // decoration: BoxDecoration,
+                            //                         alignment: Alignment.topLeft,
+                            //                         color: Color(0xff4048BF),
+                            //                         padding: const EdgeInsets.only(
+                            //                             top: 10, left: 50,  bottom: 10),
+                            //                         child: const Text(
+                            //                           "Allow",
+                            //                           style: TextStyle(color: Colors.white),
+                            //                         ),
+                            //                       ),
+                            //                     ),
+                            //                   ),
+                            //                 ],
+                            //               ),
+                            //             ],
+                            //           ),
+                            //         );
+                            //       },
+                            //       child: const Text("Show alert Dialog box"),
+                            //     ),
+                            //   ),
+                            // ),
+                            // Center(
+                            //   child: Container(
+                            //     alignment: Alignment.center,
+                            //     margin: EdgeInsets.only(top: 30, left: 44),
+                            //     child: const Text(
+                            //       "Verifying your OTP Code.....",
+                            //       style: TextStyle(
+                            //           fontFamily: 'Questrial',
+                            //           fontSize: 20,
+                            //           fontWeight: FontWeight.w500,
+                            //           fontStyle: FontStyle.normal,
+                            //           color: Colors.white),
+                            //       textAlign: TextAlign.center,
+                            //     ),
+                            //   ),
+                            // ),
                           ],
                         ),
                       ),

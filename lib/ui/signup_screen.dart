@@ -11,7 +11,6 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-
   bool value = false;
 
   bool ishiddenPassword = true;
@@ -158,8 +157,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         fontSize: 14,
                         fontStyle: FontStyle.normal),
                     decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.email_outlined,
-                          color: Colors.white),
+                      prefixIcon:
+                          Icon(Icons.email_outlined, color: Colors.white),
                       border: InputBorder.none,
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8.0)),
@@ -182,8 +181,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           color: Colors.red,
                         ),
                       ),
-
-
                       hintText: "rafidrahman38@gmail.com",
                       hintStyle: TextStyle(
                         fontFamily: 'Questrial',
@@ -255,7 +252,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           color: Colors.red,
                         ),
                       ),
-
                       hintText: "+8801310002563",
                       hintStyle: TextStyle(
                         fontFamily: 'Questrial',
@@ -277,7 +273,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     },
                   ),
                 ),
-
                 Container(
                   alignment: Alignment.topLeft,
                   margin: const EdgeInsets.only(top: 16, left: 25),
@@ -292,7 +287,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                 ),
-
                 Container(
                   // height: 60,
                   margin: const EdgeInsets.only(top: 12, left: 25, right: 18),
@@ -307,8 +301,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         fontSize: 14,
                         fontStyle: FontStyle.normal),
                     decoration: InputDecoration(
-                      prefixIcon: const Icon(Icons.lock_outline_sharp,
-                        color: Colors.white,),
+                      prefixIcon: const Icon(
+                        Icons.lock_outline_sharp,
+                        color: Colors.white,
+                      ),
                       border: InputBorder.none,
                       enabledBorder: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8.0)),
@@ -331,7 +327,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           color: Colors.red,
                         ),
                       ),
-
                       hintText: "Password",
                       hintStyle: const TextStyle(
                         fontFamily: 'Questrial',
@@ -358,7 +353,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     },
                   ),
                 ),
-
                 Container(
                   alignment: Alignment.topLeft,
                   margin: const EdgeInsets.only(top: 16, left: 25),
@@ -373,7 +367,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                 ),
-
                 Container(
                   margin: const EdgeInsets.only(top: 12, left: 25, right: 18),
                   child: TextFormField(
@@ -388,7 +381,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         fontStyle: FontStyle.normal),
                     decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.lock_outline_sharp,
-                        color: Colors.white),
+                          color: Colors.white),
                       border: InputBorder.none,
                       enabledBorder: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8.0)),
@@ -442,61 +435,65 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     },
                   ),
                 ),
-
                 Container(
                   alignment: Alignment.topLeft,
                   margin: EdgeInsets.only(top: 20, left: 25),
                   child: Row(
                     children: [
-                    Expanded(
-                    flex: 1,
-                      child: Checkbox(checkColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(2.0),
+                      Expanded(
+                        flex: 1,
+                        child: Checkbox(
+                          checkColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(2.0),
+                          ),
+                          side: MaterialStateBorderSide.resolveWith(
+                            (states) =>
+                                BorderSide(width: 1.0, color: Colors.white),
+                          ),
+                          value: this.value,
+                          onChanged: (bool? value) {
+                            setState(() {
+                              this.value = value!;
+                            });
+                          },
                         ),
-                        side: MaterialStateBorderSide.resolveWith(
-                              (states) => BorderSide(width: 1.0, color: Colors.white),
+                      ),
+                      Spacer(),
+                      Expanded(
+                        flex: 14,
+                        child: Container(
+                          margin: EdgeInsets.only(right: 20),
+                          child: const Text(
+                            "By creating an account, you are to our "
+                            "         Terms & Conditions",
+                            style: TextStyle(
+                                fontFamily: 'Questrial',
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                fontStyle: FontStyle.normal,
+                                color: Colors.white),
+                          ),
                         ),
-                        value: this.value,
-                        onChanged: (bool? value) {
-                          setState(() {
-                            this.value = value!;
-                          });
-                        },
                       ),
-                    ),
-                  Spacer(),
-                  Expanded(
-                    flex: 14,
-                    child: Container(
-                      margin: EdgeInsets.only(right: 20),
-                      child: const Text(
-                        "By creating an account, you are to our "
-                               "         Terms & Conditions",
-                        style: TextStyle(
-                            fontFamily: 'Questrial',
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400,
-                            fontStyle: FontStyle.normal,
-                            color: Colors.white),
-                      ),
-                    ),
-                  ),
                     ],
                   ),
                 ),
-
                 Container(
                   alignment: Alignment.center,
                   margin: const EdgeInsets.only(top: 20, left: 40, right: 40),
                   child: MaterialButton(
                     onPressed: () {
-                      if (_formKey.currentState!.validate()) {
-                        print("Sucessfull");
-                        return;
-                      } else {
-                        print("Not worked");
-                      }
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignInScreen()),
+                      );
+                      // if (_formKey.currentState!.validate()) {
+                      //   print("Sucessfull");
+                      //   return;
+                      // } else {
+                      //   print("Not worked");
+                      // }
                     },
                     color: Color(0xff4048BF),
                     shape: RoundedRectangleBorder(
@@ -507,7 +504,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           flex: 8,
                           child: Container(
                             alignment: Alignment.center,
-                            margin: const EdgeInsets.only(top: 16, left: 60, bottom: 16),
+                            margin: const EdgeInsets.only(
+                                top: 16, left: 60, bottom: 16),
                             child: const Text(
                               "Sign up",
                               style: TextStyle(
@@ -520,30 +518,28 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             ),
                           ),
                         ),
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        margin: EdgeInsets.only(left: 10),
-                        //alignment: Alignment.centerRight,
-                        child: const Icon(Icons.arrow_forward,
-                          color: Colors.white,),
-                      )
-                    ),
                         Expanded(
                             flex: 1,
                             child: Container(
-                              margin: EdgeInsets.only(right: 15),
+                              margin: EdgeInsets.only(left: 10),
                               //alignment: Alignment.centerRight,
-                              child: Image(
-                                image: AssetImage("assets/].png"),
-                              )
-                            )
-                        ),
+                              child: const Icon(
+                                Icons.arrow_forward,
+                                color: Colors.white,
+                              ),
+                            )),
+                        Expanded(
+                            flex: 1,
+                            child: Container(
+                                margin: EdgeInsets.only(right: 15),
+                                //alignment: Alignment.centerRight,
+                                child: Image(
+                                  image: AssetImage("assets/].png"),
+                                ))),
                       ],
                     ),
                   ),
                 ),
-
                 Container(
                   margin: const EdgeInsets.only(top: 10),
                   child: Center(
@@ -560,7 +556,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           children: [
                             TextSpan(
                                 text: "Sign in",
-
                                 style: const TextStyle(
                                   fontFamily: 'Questrial',
                                   color: Colors.white,

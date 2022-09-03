@@ -100,6 +100,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         borderRadius: BorderRadius.all(Radius.circular(8.0)),
                         borderSide: BorderSide(color: Colors.white),
                       ),
+                      errorBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                          borderSide: BorderSide(
+                            width: 1,
+                            color: Colors.red,
+                          )),
+                      focusedErrorBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                        borderSide: BorderSide(
+                          width: 1,
+                          color: Colors.red,
+                        ),
+                      ),
 
                       // border: OutlineInputBorder(),
                       hintText: "Iaamamur Rahman Rafid",
@@ -156,6 +169,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         borderRadius: BorderRadius.all(Radius.circular(8.0)),
                         borderSide: BorderSide(color: Colors.white),
                       ),
+                      errorBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                          borderSide: BorderSide(
+                            width: 1,
+                            color: Colors.red,
+                          )),
+                      focusedErrorBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                        borderSide: BorderSide(
+                          width: 1,
+                          color: Colors.red,
+                        ),
+                      ),
+
 
                       hintText: "rafidrahman38@gmail.com",
                       hintStyle: TextStyle(
@@ -214,6 +241,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8.0)),
                         borderSide: BorderSide(color: Colors.white),
+                      ),
+                      errorBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                          borderSide: BorderSide(
+                            width: 1,
+                            color: Colors.red,
+                          )),
+                      focusedErrorBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                        borderSide: BorderSide(
+                          width: 1,
+                          color: Colors.red,
+                        ),
                       ),
 
                       hintText: "+8801310002563",
@@ -278,6 +318,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         borderRadius: BorderRadius.all(Radius.circular(8.0)),
                         borderSide: BorderSide(color: Colors.white),
                       ),
+                      errorBorder: const OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                          borderSide: BorderSide(
+                            width: 1,
+                            color: Colors.red,
+                          )),
+                      focusedErrorBorder: const OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                        borderSide: BorderSide(
+                          width: 1,
+                          color: Colors.red,
+                        ),
+                      ),
+
                       hintText: "Password",
                       hintStyle: const TextStyle(
                         fontFamily: 'Questrial',
@@ -343,6 +397,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       focusedBorder: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8.0)),
                         borderSide: BorderSide(color: Colors.white),
+                      ),
+                      errorBorder: const OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                          borderSide: BorderSide(
+                            width: 1,
+                            color: Colors.red,
+                          )),
+                      focusedErrorBorder: const OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                        borderSide: BorderSide(
+                          width: 1,
+                          color: Colors.red,
+                        ),
                       ),
 
                       // border: OutlineInputBorder(),

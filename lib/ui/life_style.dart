@@ -65,7 +65,7 @@ class _LifeStyleScreenState extends State<LifeStyleScreen> {
             },
           ),
           IconButton(
-            icon: Image.asset('assets/Group.png'),
+            icon: Image.asset('assets/act_group.png'),
             onPressed: () {
               // do something
             },

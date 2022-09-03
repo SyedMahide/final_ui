@@ -28,13 +28,13 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   final _offersItems = [
-    "assets/offer.png",
-    "assets/offer.png",
-    "assets/offer.png",
-    "assets/offer.png",
-    "assets/offer.png",
-    "assets/offer.png",
-    "assets/offer.png",
+    "assets/offer_banner.png",
+    "assets/offer_banner.png",
+    "assets/offer_banner.png",
+    "assets/offer_banner.png",
+    "assets/offer_banner.png",
+    "assets/offer_banner.png",
+    "assets/offer_banner.png",
   ];
 
   @override
@@ -102,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
             },
           ),
           IconButton(
-            icon: Image.asset('assets/Group.png'),
+            icon: Image.asset('assets/act_group.png'),
             onPressed: () {
               // do something
             },

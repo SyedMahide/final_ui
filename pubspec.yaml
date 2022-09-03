@@ -17,6 +17,11 @@ dependencies:
     sdk: flutter
   pin_code_fields: ^7.4.0
   cupertino_icons: ^1.0.2
+  smooth_page_indicator: ^1.0.0+2
+  flutter_screenutil: ^5.5.3+2
+  dots_indicator: ^2.1.0
+  page_view_indicators: ^2.0.0
+  bottom_navy_bar: ^6.0.0
 
 dev_dependencies:
   flutter_test:
@@ -40,6 +45,22 @@ flutter:
     - assets/Gmail.png
     - assets/Facebook.png
     - assets/Google.png
+    - assets/ad.png
+    - assets/Search.png
+    - assets/Notification.png
+    - assets/Group.png
+    - assets/shop.png
+    - assets/wecon.png
+    - assets/dp.png
+    - assets/mosque.png
+    - assets/map.png
+    - assets/offer.png
+    - assets/news.png
+    - assets/compass.png
+    - assets/discount.png
+    - assets/home.png
+    - assets/menu.png
+    - assets/user_s.png
 
 
 

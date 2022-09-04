@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:final_ui/ui/home_screen.dart';
 
 class LifeStyleScreen extends StatefulWidget {
   @override
@@ -153,11 +154,11 @@ class _LifeStyleScreenState extends State<LifeStyleScreen> {
                   margin: const EdgeInsets.only(top: 130, left: 50, right: 50),
                   child: MaterialButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //       builder: (context) => PinCodeVerificationScreen()),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => HomeScreen()),
+                      );
                     },
                     color: Color(0xff4048BF),
                     shape: RoundedRectangleBorder(

@@ -1,3 +1,4 @@
+import 'package:final_ui/ui/main_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:final_ui/ui/home_screen.dart';
@@ -156,8 +157,7 @@ class _LifeStyleScreenState extends State<LifeStyleScreen> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => HomeScreen()),
+                        MaterialPageRoute(builder: (context) => MainScreen()),
                       );
                     },
                     color: Color(0xff4048BF),

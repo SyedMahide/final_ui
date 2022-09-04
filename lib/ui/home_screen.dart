@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
     "assets/ad.png",
     "assets/ad.png",
   ];
-  final _addPageController = PageController();
+  final _addPageController = PageController(viewportFraction: 0.9);
   final _currentAddPageNotifier = ValueNotifier<int>(0);
   final _newsItems = [
     "assets/news.png",
@@ -40,83 +40,85 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Column(
-          children: [
-            Row(
-              children: [
-                Container(
-                  margin: EdgeInsets.only(left: 20.w),
-                  height: 45.h,
-                  width: 45.w,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Image.asset("assets/dp.png",
-                      height: double.infinity,
-                      width: double.infinity,
-                      fit: BoxFit.fill),
-                ),
-                Container(
-                  height: 45.h,
-                  margin: const EdgeInsets.only(left: 10),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Good Evening",
-                        style: TextStyle(
-                            fontFamily: 'Questrial',
-                            color: Colors.white,
-                            fontSize: 12.sp,
-                            fontWeight: FontWeight.w500),
-                      ),
-                      Text(
-                        "Shohan Shabbir",
-                        style: TextStyle(
-                            fontFamily: 'Questrial',
-                            color: Colors.white,
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.w400),
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            ),
-          ],
-        ),
-        backgroundColor: Colors.black,
-        actions: <Widget>[
-          /* IconButton(
-            icon: Image.asset('assets/Search.png'),
-            onPressed: () {
-              // do something
-            },
-          ),*/
-          IconButton(
-            icon: Image.asset('assets/Notification.png'),
-            onPressed: () {
-              // do something
-            },
-          ),
-          IconButton(
-            icon: Image.asset('assets/act_group.png'),
-            onPressed: () {
-              // do something
-            },
-          )
-        ],
-      ),
       backgroundColor: Colors.black,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
-            margin: EdgeInsets.only(left: 30.w, top: 40.h),
+            margin: EdgeInsets.only(left: 30.w, top: 20.h),
             child: Column(
               // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              // margin: EdgeInsets.only(left: 20.w),
+                              height: 45.h,
+                              width: 45.w,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Image.asset("assets/dp.png",
+                                  height: double.infinity,
+                                  width: double.infinity,
+                                  fit: BoxFit.fill),
+                            ),
+                            Container(
+                              height: 45.h,
+                              margin: const EdgeInsets.only(left: 10),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Good Evening",
+                                    style: TextStyle(
+                                        fontFamily: 'Questrial',
+                                        color: Colors.white,
+                                        fontSize: 12.sp,
+                                        fontWeight: FontWeight.w500),
+                                  ),
+                                  SizedBox(
+                                    height: 4,
+                                  ),
+                                  Text(
+                                    "Shohan Shabbir",
+                                    style: TextStyle(
+                                        fontFamily: 'Questrial',
+                                        color: Colors.white,
+                                        fontSize: 16.sp,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            IconButton(
+                              icon: Image.asset('assets/Notification.png'),
+                              onPressed: () {
+                                // do something
+                              },
+                            ),
+                            IconButton(
+                              icon: Image.asset('assets/act_group.png'),
+                              onPressed: () {
+                                // do something
+                              },
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 30)
+                  ],
+                ),
                 Row(
                   children: [
                     Container(
@@ -323,7 +325,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Container(
       width: 163.w,
       height: 163.h,
-
       margin: EdgeInsets.only(right: 10.w),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
@@ -331,10 +332,15 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       child: Stack(
         children: [
-          Image.asset(_offersItems[index],
+          ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Image.asset(
+              _offersItems[index],
               height: double.infinity,
               width: double.infinity,
-              fit: BoxFit.fill),
+              fit: BoxFit.fill,
+            ),
+          )
         ],
       ),
     );
@@ -349,7 +355,6 @@ class _HomeScreenState extends State<HomeScreen> {
         borderRadius: BorderRadius.circular(10),
       ),
       child: Container(
-
         child: Row(
           children: [
             Container(
@@ -383,23 +388,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             fontWeight: FontWeight.w400),
                       ),
                     ),
-
                     Spacer(),
-                    /*Row(
-                      children: [
-                        Spacer(),
-                        Container(
-                          child: Text(
-                            "Details",
-                            style: TextStyle(
-                                fontFamily: 'Questrial',
-                                color: Colors.white,
-                                fontSize: 12.sp,
-                                fontWeight: FontWeight.w400),
-                          ),
-                        ),
-                      ],
-                    ),*/
                   ],
                 ),
               ),
@@ -412,9 +401,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
   _buildSlidPageView() {
     return Container(
+      // alignment: Alignment.centerLeft,
       height: 158.h,
       width: 244.w,
       child: PageView.builder(
+          padEnds: false,
+          pageSnapping: true,
           itemCount: _slideAddItems.length,
           controller: _addPageController,
           itemBuilder: (BuildContext context, int index) {
@@ -440,9 +432,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget addSlider(int index) {
     return Container(
+      margin: EdgeInsets.only(right: 16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Colors.white,
+        // color: Colors.white,
       ),
       child: Image.asset(_slideAddItems[index],
           height: double.infinity, width: double.infinity, fit: BoxFit.fill),

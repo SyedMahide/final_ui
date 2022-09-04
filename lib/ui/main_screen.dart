@@ -19,6 +19,7 @@ class _MainScreenState extends State<MainScreen> {
     super.initState();
     _pageController = PageController();
   }
+
   @override
   void dispose() {
     _pageController.dispose();
@@ -36,13 +37,20 @@ class _MainScreenState extends State<MainScreen> {
           },
           children: <Widget>[
             HomeScreen(),
-            Container(color: Colors.red,),
-            Container(color: Colors.green,),
-            Container(color: Colors.blue,),
+            Container(
+              color: Colors.red,
+            ),
+            Container(
+              color: Colors.green,
+            ),
+            Container(
+              color: Colors.blue,
+            ),
           ],
         ),
       ),
       bottomNavigationBar: BottomNavyBar(
+        backgroundColor: Colors.black,
         selectedIndex: _currentIndex,
         onItemSelected: (index) {
           setState(() => _currentIndex = index);
@@ -50,20 +58,31 @@ class _MainScreenState extends State<MainScreen> {
         },
         items: <BottomNavyBarItem>[
           BottomNavyBarItem(
-              title: Text('Home'),
-              icon: Image.asset("assets/home.png")
+            // activeColor: Color(0xff4048BF),
+            title: Text('Home'),
+            icon: Icon(Icons.home),
+            //Image.asset("assets/home.png"),
+            textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
-              title: Text('Item Two'),
-              icon: Icon(Icons.apps)
+            title: Text('Item Two'),
+            icon: Icon(Icons.apps),
+            textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
-              title: Text('Item Three'),
-              icon: Icon(Icons.chat_bubble)
+            title: Text('Item Two'),
+            icon: Icon(Icons.near_me),
+            textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
-              title: Text('Item Four'),
-              icon: Icon(Icons.settings)
+            title: Text('Item Three'),
+            icon: Icon(Icons.chat_bubble),
+            textAlign: TextAlign.center,
+          ),
+          BottomNavyBarItem(
+            title: Text('Item Four'),
+            icon: Icon(Icons.settings),
+            textAlign: TextAlign.center,
           ),
         ],
       ),

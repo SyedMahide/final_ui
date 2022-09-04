@@ -51,7 +51,7 @@ flutter:
     - assets/map.png
     - assets/fastfood.png
     - assets/splash.png
-    - assets/ad.png
+    -  assets/ad.png
     - assets/Search.png
     - assets/Notification.png
     - assets/Group.png
@@ -69,6 +69,7 @@ flutter:
     - assets/user_s.png
     - assets/offer_banner.png
     - assets/act_group.png
+    - assets/loading.png
 
 
 
@@ -81,6 +82,9 @@ flutter:
     - family: Poppins
       fonts:
         - asset: fonts/Poppins-Regular.ttf
+    - family: Quantico
+      fonts:
+        - asset: fonts/Quantico-Regular.otf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

@@ -16,9 +16,11 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   _navigateToHome() async {
-    await Future.delayed(Duration(microseconds: 1500), () {});
-    Navigator.pushReplacement(
+    Future.delayed(const Duration(seconds: 3)).then((val) {
+      Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => SignUpScreen()));
+    });
+
   }
 
   @override
@@ -28,14 +30,12 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: Column(
           children: [
-            Container(
-              child: Image(
-                image: AssetImage("assets/splash.png"),
-              ),
+            const  Image(
+              image: AssetImage("assets/splash.png"),
             ),
             Container(
               alignment: Alignment.center,
-              margin: EdgeInsets.only(top: 38),
+              margin: const EdgeInsets.only(top: 38),
               child: const Text("Club P2P",
               style: TextStyle(
                 fontFamily: 'Quantico',

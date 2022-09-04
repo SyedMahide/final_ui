@@ -2,6 +2,7 @@ import 'package:final_ui/ui/home_screen.dart';
 import 'package:final_ui/ui/life_style.dart';
 import 'package:final_ui/ui/main_screen.dart';
 import 'package:final_ui/ui/signup_screen.dart';
+import 'package:final_ui/ui/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       builder: (BuildContext context, Widget? child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: SignUpScreen(),
+          home: SplashScreen(),
         );
       },
     );

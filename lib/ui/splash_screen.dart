@@ -48,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Container(
               alignment: Alignment.center,
               margin: EdgeInsets.only(top: 14),
-                child: const Text("A sister concern of Wecone propertites",
+                child: const Text("A sister concern of WECON properties",
                   style: TextStyle(
                     fontFamily: 'Quantico',
                     fontWeight: FontWeight.w700,

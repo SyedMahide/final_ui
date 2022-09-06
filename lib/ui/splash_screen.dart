@@ -16,11 +16,10 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   _navigateToHome() async {
-    Future.delayed(const Duration(seconds: 3)).then((val) {
+    Future.delayed(const Duration(seconds: 1)).then((val) {
       Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => SignUpScreen()));
+          context, MaterialPageRoute(builder: (context) => SignUpScreen()));
     });
-
   }
 
   @override
@@ -32,39 +31,34 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Container(
               margin: EdgeInsets.only(top: 180),
-              child: const  Image(
+              child: const Image(
                 image: AssetImage("assets/splash.png"),
               ),
             ),
             Container(
               alignment: Alignment.center,
               margin: const EdgeInsets.only(top: 38),
-              child: const Text("Club P2P",
-              style: TextStyle(
-                fontFamily: 'Quantico',
-                fontWeight: FontWeight.w400,
-                fontSize: 34,
-                color: Colors.white,
-              ),
+              child: const Text(
+                "Club P2P",
+                style: TextStyle(
+                  fontFamily: 'Quantico',
+                  fontWeight: FontWeight.w400,
+                  fontSize: 34,
+                  color: Colors.white,
+                ),
               ),
             ),
             Container(
               alignment: Alignment.center,
               margin: EdgeInsets.only(top: 8),
-                child: const Text("A sister concern of WECON properties",
-                  style: TextStyle(
-                    fontFamily: 'Quantico',
-                    fontWeight: FontWeight.w700,
-                    fontSize: 14,
-                    color: Colors.white,
-                  ),
-                )
-            ),
-            Container(
-              alignment: Alignment.center,
-              margin: EdgeInsets.only(top: 40),
-              child: Image(
-                image: AssetImage("assets/loading.png"),
+              child: const Text(
+                "A sister concern of WECON properties",
+                style: TextStyle(
+                  fontFamily: 'Quantico',
+                  fontWeight: FontWeight.w700,
+                  fontSize: 14,
+                  color: Colors.white,
+                ),
               ),
             ),
           ],

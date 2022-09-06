@@ -1,4 +1,5 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:final_ui/ui/lifeStyle_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'home_screen.dart';
@@ -37,8 +38,9 @@ class _MainScreenState extends State<MainScreen> {
           },
           children: <Widget>[
             HomeScreen(),
+            LifeStyleScreen(),
             Container(
-              color: Colors.red,
+              color: Colors.redAccent,
             ),
             Container(
               color: Colors.green,
@@ -65,22 +67,22 @@ class _MainScreenState extends State<MainScreen> {
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
-            title: Text('Item Two'),
+            title: Text('Offers'),
             icon: Icon(Icons.apps),
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
-            title: Text('Item Two'),
+            title: Text('Explore'),
             icon: Icon(Icons.near_me),
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
-            title: Text('Item Three'),
+            title: Text('Meetings'),
             icon: Icon(Icons.chat_bubble),
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
-            title: Text('Item Four'),
+            title: Text('Settings'),
             icon: Icon(Icons.settings),
             textAlign: TextAlign.center,
           ),

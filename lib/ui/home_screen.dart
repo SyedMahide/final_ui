@@ -11,9 +11,12 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final _slideAddItems = [
-    "assets/ad.png",
-    "assets/ad.png",
-    "assets/ad.png",
+    "assets/slider_img.png",
+    "assets/slider_img_two.png",
+    "assets/slider_img.png",
+    "assets/slider_img_two.png",
+    "assets/slider_img.png",
+    "assets/slider_img_two.png"
   ];
   final _addPageController = PageController(viewportFraction: 0.9);
   final _currentAddPageNotifier = ValueNotifier<int>(0);
@@ -44,272 +47,421 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
-            margin: EdgeInsets.only(left: 30.w, top: 20.h),
+            margin: EdgeInsets.only(top: 20, left: 30),
             child: Column(
-              // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Column(
+                Row(
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Row(
-                          children: [
-                            Container(
-                              // margin: EdgeInsets.only(left: 20.w),
-                              height: 45.h,
-                              width: 45.w,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
+                        Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Image.asset("assets/dp.png")),
+                        Container(
+                          margin: EdgeInsets.only(left: 10),
+                          height: 40.h,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text(
+                                "Good Evening",
+                                style: TextStyle(
+                                    fontFamily: 'Questrial',
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400
+                                ),
                               ),
-                              child: Image.asset("assets/dp.png",
-                                  height: double.infinity,
-                                  width: double.infinity,
-                                  fit: BoxFit.fill),
-                            ),
-                            Container(
-                              height: 45.h,
-                              margin: const EdgeInsets.only(left: 10),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "Good Evening",
-                                    style: TextStyle(
-                                        fontFamily: 'Questrial',
-                                        color: Colors.white,
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                  SizedBox(
-                                    height: 4,
-                                  ),
-                                  Text(
-                                    "Shohan Shabbir",
-                                    style: TextStyle(
-                                        fontFamily: 'Questrial',
-                                        color: Colors.white,
-                                        fontSize: 16.sp,
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ],
+                              SizedBox(
+                                height: 4,
                               ),
-                            ),
-                          ],
+                              Text(
+                                "Shohan Shabbir",
+                                style: TextStyle(
+                                    fontFamily: 'Questrial',
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400),
+                              ),
+                            ],
+                          ),
                         ),
-                        Row(
-                          children: [
-                            IconButton(
-                              icon: Image.asset('assets/Notification.png'),
-                              onPressed: () {
-                                // do something
-                              },
-                            ),
-                            IconButton(
-                              icon: Image.asset('assets/act_group.png'),
-                              onPressed: () {
-                                // do something
-                              },
-                            ),
-                          ],
-                        )
                       ],
                     ),
-                    SizedBox(height: 30)
+                    Spacer(),
+                    Container(
+                      width: 100.w,
+                      alignment: Alignment.topRight,
+                      child: IconButton(
+                        icon: Image.asset("assets/Notification.png"),
+                        onPressed: () {},
+                      ),
+                    ),
+                    IconButton(
+                      icon: Image.asset("assets/act_group.png"),
+                      onPressed: () {},
+                    ),
                   ],
                 ),
                 Row(
                   children: [
                     Container(
-                      height: 20.h,
-                      width: 25.w,
-                      child: Image.asset("assets/mosque.png",
-                          height: double.infinity,
-                          width: double.infinity,
-                          fit: BoxFit.fill),
+                      // margin: EdgeInsets.only(top: 20),
+                      child: Image.asset("assets/mosque.png"),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 10.w),
-                      child: Text(
+                      margin: EdgeInsets.only(left: 10),
+                      child: const Text(
                         "Ibadah",
-                        style: TextStyle(
-                            fontFamily: 'Questrial',
+                        style: TextStyle(fontFamily: 'Questrial',
                             color: Colors.white,
-                            fontSize: 12.sp,
+                            fontSize: 12,
                             fontWeight: FontWeight.w400),
                       ),
                     ),
                     Spacer(),
                     Container(
-                      margin: EdgeInsets.only(left: 10.w),
-                      child: Text(
-                        "Ibadah",
-                        style: TextStyle(
-                            fontFamily: 'Questrial',
+                      margin: EdgeInsets.only(top: 50, left: 10),
+                      child: const Text(
+                        "Fazar at 03:55 AM (02:58:00)",
+                        style: TextStyle(fontFamily: 'Questrial',
                             color: Colors.white,
-                            fontSize: 12.sp,
-                            fontWeight: FontWeight.w400),
-                      ),
-                    ),
-                    Container(
-                      height: 23.h,
-                      width: 20.w,
-                      margin: EdgeInsets.only(left: 10.w, right: 30.w),
-                      child: Image.asset("assets/map.png",
-                          height: double.infinity,
-                          width: double.infinity,
-                          fit: BoxFit.fill),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 8.h,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Fazr at 03:55 AM (02:58:00)",
-                      style: TextStyle(
-                          fontFamily: 'Questrial',
-                          color: Colors.white,
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w400),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 34.h,
-                ),
-                Row(
-                  children: [
-                    Container(
-                      child: Text(
-                        "What’s New",
-                        style: TextStyle(
-                            fontFamily: 'Questrial',
-                            color: Colors.white,
-                            fontSize: 16.sp,
+                            fontSize: 13,
                             fontWeight: FontWeight.w400),
                       ),
                     ),
                     Spacer(),
                     Container(
-                      margin: EdgeInsets.only(left: 10.w, right: 30.w),
-                      child: Text(
+                      margin: EdgeInsets.only(left: 10),
+                      child: const Text(
+                        "Dhaka",
+                        style: TextStyle(fontFamily: 'Questrial',
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 10),
+                      child: Image.asset("assets/map.png"),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(top: 30),
+                      child: const Text(
+                        "What's New",
+                        style: TextStyle(
+                            fontFamily: 'Questrial',
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400
+                        ),
+                      ),
+                    ),
+                    Spacer(),
+                    Container(
+                      margin: EdgeInsets.only(top: 30, right: 35),
+                      child: const Text(
                         "See All",
-                        style: TextStyle(
-                            fontFamily: 'Questrial',
+                        style: TextStyle(fontFamily: 'Questrial',
                             color: Colors.white,
-                            fontSize: 10.sp,
+                            fontSize: 10,
                             fontWeight: FontWeight.w400),
                       ),
-                    ),
+                    )
                   ],
-                ),
-                SizedBox(
-                  height: 8.h,
                 ),
                 Container(
                   height: 158.h,
-                  width: MediaQuery.of(context).size.width,
-                  child: _buildSlidPageView(),
+                  width: MediaQuery.of(context).size.width - 50,
+                  child: Container(
+                    // height: 158,
+                    // width: MediaQuery.of(context).size.width,
+                    child: PageView.builder(
+                      padEnds: false,
+                      pageSnapping: true,
+                      itemCount: _slideAddItems.length,
+                      controller: _addPageController,
+                      // scrollDirection: Axis.horizontal,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Container(
+                          child: Stack(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(top: 20),
+                                alignment: Alignment.topLeft,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  // color: Colors.white,
+                                ),
+                                child: Image.asset(_slideAddItems[index]),
+                              ),
+                              Positioned(
+                                bottom: 15,
+                                child: Container(
+                                  margin: EdgeInsets.only(left: 8),
+                                  child: const Text(
+                                    "See your new offer >>",
+                                    style: TextStyle(fontFamily: 'Questrial',
+                                        color: Colors.white,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        );
+                      },
+                      onPageChanged: (int index) {
+                        _currentAddPageNotifier.value = index;
+                      },
+                    ),
+                  ),
                 ),
-                SizedBox(
-                  height: 10.h,
+                const SizedBox(
+                  height: 10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    _buildCircleIndicator(),
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CirclePageIndicator(
+                          itemCount: _slideAddItems.length,
+                          currentPageNotifier: _currentAddPageNotifier,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
-                SizedBox(
-                  height: 30.h,
+                const SizedBox(
+                  height: 30,
                 ),
                 Row(
                   children: [
                     Container(
-                      child: Text(
+                      child: const Text(
                         "News",
                         style: TextStyle(
                             fontFamily: 'Questrial',
                             color: Colors.white,
-                            fontSize: 16.sp,
+                            fontSize: 14,
                             fontWeight: FontWeight.w400),
                       ),
                     ),
                     Spacer(),
                     Container(
-                      margin: EdgeInsets.only(left: 10.w, right: 30.w),
-                      child: Text(
+                      margin: EdgeInsets.only(left: 10, right: 30),
+                      child: const Text(
                         "See All",
                         style: TextStyle(
                             fontFamily: 'Questrial',
                             color: Colors.white,
-                            fontSize: 10.sp,
+                            fontSize: 10,
                             fontWeight: FontWeight.w400),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 8.h,
-                ),
-                Container(
-                  height: 103.h,
-                  width: MediaQuery.of(context).size.width,
-                  child: ListView.builder(
-                    itemCount: 7,
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (BuildContext context, int index) {
-                      return newsListItem(index);
-                    },
-                  ),
-                ),
-                SizedBox(
-                  height: 16.h,
+                const SizedBox(
+                  height: 8,
                 ),
                 Row(
                   children: [
                     Container(
-                      child: Text(
+                      height: 103.h,
+                      width: MediaQuery.of(context).size.width - 60,
+                      margin: EdgeInsets.only(right: 30),
+                      child: ListView.builder(
+                        itemCount: _newsItems.length,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (Buildercontext, int index) {
+                          return Container(
+                            //height: 103,
+                            width: MediaQuery.of(context).size.width - 140,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Container(
+                              child: Row(
+                                children: [
+                                  Container(
+                                    decoration: const BoxDecoration(
+                                      borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(10),
+                                        bottomLeft: Radius.circular(10),
+                                      ),
+                                    ),
+                                    height: 103.h,
+                                    width: 91.w,
+                                    child: Image.asset(_newsItems[index],
+                                        height: double.infinity,
+                                        width: double.infinity,
+                                        fit: BoxFit.fill),
+                                  ),
+                                  Container(
+                                    decoration: const BoxDecoration(
+                                      borderRadius: BorderRadius.only(
+                                        topRight: Radius.circular(10),
+                                        bottomRight: Radius.circular(10),
+                                      ),
+                                      color: Color(0xff262D96),
+                                    ),
+                                    height: double.maxFinite,
+                                    child: Container(
+                                      padding: EdgeInsets.only(
+                                          top: 6, left: 6, right: 10),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                        // mainAxisAlignment: MainAxisAlignment.start,
+                                        children: [
+                                          const Text(
+                                            "Ukrainian officials claim",
+                                            style: TextStyle(
+                                                fontFamily: 'Questrial',
+                                                color: Colors.white,
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w400),
+                                          ),
+                                          const Text(
+                                            "Moscow's forces are",
+                                            style: TextStyle(
+                                                fontFamily: 'Questrial',
+                                                color: Colors.white,
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w400),
+                                            textAlign: TextAlign.left,
+                                          ),
+                                          const Text(
+                                            "suffering 'huge losses'",
+                                            style: TextStyle(
+                                                fontFamily: 'Questrial',
+                                                color: Colors.white,
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w400),
+                                          ),
+                                          const Text(
+                                            "as they bombard the",
+                                            style: TextStyle(
+                                                fontFamily: 'Questrial',
+                                                color: Colors.white,
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w400),
+                                          ),
+                                          const Text(
+                                            "key .",
+                                            style: TextStyle(
+                                                fontFamily: 'Questrial',
+                                                color: Colors.white,
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w400),
+                                          ),
+                                          Column(
+                                            // crossAxisAlignment: CrossAxisAlignment.end,
+                                            // mainAxisAlignment: MainAxisAlignment.end,
+                                            children: [
+                                              Container(
+                                                margin: EdgeInsets.only(
+                                                    top: 6, left: 60),
+                                                child: const Text(
+                                                  "View Details",
+                                                  style: TextStyle(
+                                                    decoration: TextDecoration
+                                                        .underline,
+                                                    decorationColor:
+                                                    Colors.indigo,
+                                                    decorationThickness: 5,
+                                                    fontFamily: 'Questrial',
+                                                    color: Colors.white,
+                                                    fontSize: 12,
+                                                    fontWeight: FontWeight.w400,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      child: const Text(
                         "My Offers",
                         style: TextStyle(
                             fontFamily: 'Questrial',
                             color: Colors.white,
-                            fontSize: 16.sp,
+                            fontSize: 14,
                             fontWeight: FontWeight.w400),
                       ),
                     ),
                     Spacer(),
                     Container(
-                      margin: EdgeInsets.only(left: 10.w, right: 30.w),
-                      child: Text(
+                      margin: EdgeInsets.only(left: 10, right: 30),
+                      child: const Text(
                         "See All",
                         style: TextStyle(
                             fontFamily: 'Questrial',
                             color: Colors.white,
-                            fontSize: 10.sp,
+                            fontSize: 10,
                             fontWeight: FontWeight.w400),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 12.h,
+                const SizedBox(
+                  height: 12,
                 ),
                 Container(
                   height: 163.h,
                   width: MediaQuery.of(context).size.width,
                   child: ListView.builder(
-                    itemCount: 7,
+                    itemCount: _offersItems.length,
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (BuildContext context, int index) {
-                      return offersListItem(index);
+                      return Container(
+                        width: 163.w,
+                        height: 163.h,
+                        margin: EdgeInsets.only(right: 10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.red,
+                        ),
+                        child: Stack(
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(12),
+                              child: Image.asset(
+                                _offersItems[index],
+                                height: double.infinity,
+                                width: double.infinity,
+                                fit: BoxFit.fill,
+                              ),
+                            )
+                          ],
+                        ),
+                      );
                     },
                   ),
                 ),
@@ -318,127 +470,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-    );
-  }
-
-  Widget offersListItem(int index) {
-    return Container(
-      width: 163.w,
-      height: 163.h,
-      margin: EdgeInsets.only(right: 10.w),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: Colors.red,
-      ),
-      child: Stack(
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(12),
-            child: Image.asset(
-              _offersItems[index],
-              height: double.infinity,
-              width: double.infinity,
-              fit: BoxFit.fill,
-            ),
-          )
-        ],
-      ),
-    );
-  }
-
-  Widget newsListItem(int index) {
-    return Container(
-      width: 242.w,
-      height: 103.h,
-      margin: EdgeInsets.only(right: 24.w),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Container(
-        child: Row(
-          children: [
-            Container(
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(10),
-                  bottomLeft: Radius.circular(10),
-                ),
-              ),
-              height: 103.h,
-              width: 91.w,
-              child: Image.asset(_newsItems[index],
-                  height: double.infinity,
-                  width: double.infinity,
-                  fit: BoxFit.fill),
-            ),
-            Container(
-              child: Container(
-                height: double.maxFinite,
-                margin: EdgeInsets.all(9.w),
-                child: Column(
-                  children: [
-                    Container(
-                      child: Text(
-                        // "Ukrainian officials claim Moscow's forces are suffering 'huge losses' as they bombard the key .",
-                        "Ukrainian officials ",
-                        style: TextStyle(
-                            fontFamily: 'Questrial',
-                            color: Colors.white,
-                            fontSize: 12.sp,
-                            fontWeight: FontWeight.w400),
-                      ),
-                    ),
-                    Spacer(),
-                  ],
-                ),
-              ),
-            )
-          ],
-        ),
-      ),
-    );
-  }
-
-  _buildSlidPageView() {
-    return Container(
-      // alignment: Alignment.centerLeft,
-      height: 158.h,
-      width: 244.w,
-      child: PageView.builder(
-          padEnds: false,
-          pageSnapping: true,
-          itemCount: _slideAddItems.length,
-          controller: _addPageController,
-          itemBuilder: (BuildContext context, int index) {
-            return addSlider(index);
-          },
-          onPageChanged: (int index) {
-            _currentAddPageNotifier.value = index;
-          }),
-    );
-  }
-
-  _buildCircleIndicator() {
-    return Container(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: CirclePageIndicator(
-          itemCount: _slideAddItems.length,
-          currentPageNotifier: _currentAddPageNotifier,
-        ),
-      ),
-    );
-  }
-
-  Widget addSlider(int index) {
-    return Container(
-      margin: EdgeInsets.only(right: 16),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        // color: Colors.white,
-      ),
-      child: Image.asset(_slideAddItems[index],
-          height: double.infinity, width: double.infinity, fit: BoxFit.fill),
     );
   }
 }

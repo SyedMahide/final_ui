@@ -72,6 +72,11 @@ flutter:
     - assets/loading.png
     - assets/slider_img.png
     - assets/slider_img_two.png
+    - assets/top_offers.png
+    - assets/meeting.png
+    - assets/events.png
+    - assets/card.png
+    - assets/life.png
 
 
 

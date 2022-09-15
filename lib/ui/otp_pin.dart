@@ -6,6 +6,8 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:flutter/material.dart';
 import 'package:final_ui/ui/lifeStyle_screen.dart';
 
+import 'home_screen.dart';
+
 class PinCodeVerificationScreen extends StatefulWidget {
   final String? phoneNumber;
 
@@ -209,9 +211,9 @@ class _PinCodeVerificationScreenState extends State<PinCodeVerificationScreen> {
                               alignment: Alignment.topLeft,
                               margin: const EdgeInsets.only(top: 33, left: 28),
                               child: RichText(
-                                text: TextSpan(
+                                text: const TextSpan(
                                     text: "Code not received? ",
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                       fontFamily: 'Questrial',
                                       color: Colors.white,
                                       fontSize: 14,
@@ -221,7 +223,7 @@ class _PinCodeVerificationScreenState extends State<PinCodeVerificationScreen> {
                                     children: [
                                       TextSpan(
                                         text: "Send again",
-                                        style: const TextStyle(
+                                        style: TextStyle(
                                           fontFamily: 'Questrial',
                                           color: Color(0xff1877F2),
                                           fontSize: 14,

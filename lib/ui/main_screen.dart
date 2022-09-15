@@ -2,7 +2,10 @@ import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:final_ui/ui/lifeStyle_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'explore_screen.dart';
 import 'home_screen.dart';
+import 'life_style.dart';
+import 'offers_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -38,10 +41,9 @@ class _MainScreenState extends State<MainScreen> {
           },
           children: <Widget>[
             HomeScreen(),
-            LifeStyleScreen(),
-            Container(
-              color: Colors.redAccent,
-            ),
+            OffersScreen(),
+           // LifeStylePage(),
+            ExploreScreen(),
             Container(
               color: Colors.green,
             ),
@@ -68,22 +70,22 @@ class _MainScreenState extends State<MainScreen> {
           ),
           BottomNavyBarItem(
             title: Text('Offers'),
-            icon: Icon(Icons.apps),
+            icon: Icon(Icons.discount_outlined),
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
             title: Text('Explore'),
-            icon: Icon(Icons.near_me),
+            icon: Icon(Icons.explore_outlined),
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
             title: Text('Meetings'),
-            icon: Icon(Icons.chat_bubble),
+            icon: Icon(Icons.supervised_user_circle_outlined),
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
             title: Text('Settings'),
-            icon: Icon(Icons.settings),
+            icon: Icon(Icons.menu_outlined),
             textAlign: TextAlign.center,
           ),
         ],

@@ -95,7 +95,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       alignment: Alignment.topRight,
                       child: IconButton(
                         icon: Image.asset("assets/Notification.png"),
-                        onPressed: () {},
+                        onPressed: () {
+
+                        },
                       ),
                     ),
                     IconButton(

@@ -3,14 +3,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:page_view_indicators/circle_page_indicator.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class LifeStyleScreen extends StatefulWidget {
-  const LifeStyleScreen({Key? key}) : super(key: key);
+class LifeStylePage extends StatefulWidget {
+  const LifeStylePage({Key? key}) : super(key: key);
 
   @override
-  State<LifeStyleScreen> createState() => _LifeStyleScreenState();
+  State<LifeStylePage> createState() => _LifeStylePageState();
 }
 
-class _LifeStyleScreenState extends State<LifeStyleScreen> {
+class _LifeStylePageState extends State<LifeStylePage> {
   final _slideAddItems = [
     "assets/ad.png",
     "assets/ad.png",

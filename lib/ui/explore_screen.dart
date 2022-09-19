@@ -1,9 +1,7 @@
 import 'package:final_ui/ui/life_style.dart';
-import 'package:final_ui/ui/main_screen.dart';
+//import 'package:final_ui/ui/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:page_view_indicators/circle_page_indicator.dart';
-
-import 'lifeStyle_screen.dart';
 
 class ExploreScreen extends StatefulWidget {
   @override
@@ -28,12 +26,14 @@ class _ExploreScreenState extends State<ExploreScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Explore",
+        title: const Text(
+          "Explore",
           style: TextStyle(
               fontFamily: 'Questrial',
               color: Colors.white,
               fontSize: 20,
-              fontWeight: FontWeight.w400),),
+              fontWeight: FontWeight.w400),
+        ),
         backgroundColor: Colors.black,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_outlined, color: Colors.white),
@@ -93,126 +93,198 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 ],
               ),
               Container(
-                height: 300,
-                width: 300,
+                height: 325,
+                width: 325,
                 child: Padding(
                   padding: const EdgeInsets.only(top: 30),
                   child: GridView(
                     // ignore: sort_child_properties_last
                     children: [
-                      InkWell(
-                        onTap: () {
-                          //Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                        },
-                        child: Container(
-                          margin: EdgeInsets.only(left: 10),
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Color(0xff4048BF),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                child: IconButton(
-                                  icon: Image.asset("assets/meeting.png"),
-                                  onPressed: () {
-                                    // Navigator.push(
-                                    //   context,
-                                    //   MaterialPageRoute(builder: (context) => OfferScreen()),
-                                    // );
-                                  },
+                      Column(
+                        children: [
+                          Container(
+                            height: MediaQuery.of(context).size.height - 784,
+                            width: 325,
+                            child: InkWell(
+                              onTap: () {
+                                //Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                              },
+                              child: Container(
+                                margin: EdgeInsets.only(left: 10),
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Color(0xff4048BF),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      child: IconButton(
+                                        icon: Image.asset("assets/meeting.png"),
+                                        onPressed: () {
+                                          // Navigator.push(
+                                          //   context,
+                                          //   MaterialPageRoute(builder: (context) => OfferScreen()),
+                                          // );
+                                        },
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
-                              Container(
-                                child: const Text(
-                                  "Meetng",
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                              )
-                            ],
+                            ),
                           ),
-                        ),
+                          Container(
+                            margin: EdgeInsets.only(top: 10, left: 6),
+                            child: const Text(
+                              "Meetings",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: "Questrial",
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ),
+                        ],
                       ),
-                      InkWell(
-                        onTap: () {
-                          //Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                        },
-                        child: Container(
-                          margin: EdgeInsets.only(left: 10),
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Color(0xff4048BF),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                child: IconButton(
-                                  icon: Image.asset("assets/events.png"),
-                                  onPressed: () {
-                                    // Navigator.push(
-                                    //   context,
-                                    //   MaterialPageRoute(builder: (context) => OfferScreen()),
-                                    // );
-                                  },
+                      Column(
+                        children: [
+                          Container(
+                            height: MediaQuery.of(context).size.height - 784,
+                            width: 325,
+                            child: InkWell(
+                              onTap: () {
+                                //Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                              },
+                              child: Container(
+                                margin: EdgeInsets.only(left: 10),
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Color(0xff4048BF),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      child: IconButton(
+                                        icon: Image.asset("assets/events.png"),
+                                        onPressed: () {
+                                          // Navigator.push(
+                                          //   context,
+                                          //   MaterialPageRoute(builder: (context) => OfferScreen()),
+                                          // );
+                                        },
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
-                            ],
+                            ),
                           ),
-                        ),
+                          Container(
+                            margin: EdgeInsets.only(top: 10, left: 6),
+                            child: const Text(
+                              "Events",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: "Questrial",
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ),
+                        ],
                       ),
-                      InkWell(
-                        onTap: () {
-                          //Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                        },
-                        child: Container(
-                          margin: EdgeInsets.only(left: 10),
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Color(0xff4048BF),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                child: IconButton(
-                                  icon: Image.asset("assets/card.png"),
-                                  onPressed: () {
-                                    // Navigator.push(
-                                    //   context,
-                                    //   MaterialPageRoute(builder: (context) => OfferScreen()),
-                                    // );
-                                  },
+                      Column(
+                        children: [
+                          Container(
+                            height: MediaQuery.of(context).size.height - 784,
+                            width: 325,
+                            child: InkWell(
+                              onTap: () {
+                                //Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                              },
+                              child: Container(
+                                margin: EdgeInsets.only(left: 10),
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Color(0xff4048BF),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      child: IconButton(
+                                        icon: Image.asset("assets/card.png"),
+                                        onPressed: () {
+                                          // Navigator.push(
+                                          //   context,
+                                          //   MaterialPageRoute(builder: (context) => OfferScreen()),
+                                          // );
+                                        },
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
-                            ],
+                            ),
                           ),
-                        ),
+                          Container(
+                            margin: EdgeInsets.only(top: 10, left: 6),
+                            child: const Text(
+                              "Card",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: "Questrial",
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ),
+                        ],
                       ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>LifeStylePage()));
-                        },
-                        child: Container(
-                          margin: EdgeInsets.only(left: 10),
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Color(0xff4048BF),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                child: IconButton(
-                                  icon: Image.asset("assets/life.png"),
-                                  onPressed: () {
-                                  },
+                      Column(
+                        children: [
+                          Container(
+                            height: MediaQuery.of(context).size.height - 784,
+                            width: 325,
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => LifeStylePage()));
+                              },
+                              child: Container(
+                                margin: EdgeInsets.only(left: 10),
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Color(0xff4048BF),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      child: IconButton(
+                                        icon: Image.asset("assets/life.png"),
+                                        onPressed: () {},
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
-                            ],
+                            ),
                           ),
-                        ),
+                          Container(
+                            margin: EdgeInsets.only(top: 10, left: 6),
+                            child: const Text(
+                              "LifeStyle",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: "Questrial",
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                     gridDelegate:

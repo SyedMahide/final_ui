@@ -84,7 +84,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           padding: const EdgeInsets.only(
                               top: 10, left: 10, right: 55, bottom: 10),
                           child: TextFormField(
-                            keyboardType: TextInputType.text,
+                            keyboardType: TextInputType.number,
                             cursorColor: Colors.white,
                             style: const TextStyle(
                                 color: Color(0xffB0AAAA),

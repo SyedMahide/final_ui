@@ -77,6 +77,10 @@ flutter:
     - assets/events.png
     - assets/card.png
     - assets/life.png
+    - assets/meetings.png
+    - assets/arcticons_lounge.png
+    - assets/events_screen.png
+    - assets/card_screen.png
 
 
 

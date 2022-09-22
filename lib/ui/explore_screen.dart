@@ -3,6 +3,10 @@ import 'package:final_ui/ui/life_style.dart';
 import 'package:flutter/material.dart';
 import 'package:page_view_indicators/circle_page_indicator.dart';
 
+import 'book_meetings_screen.dart';
+import 'card_screen.dart';
+import 'events_screen.dart';
+
 class ExploreScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -122,10 +126,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
                                       child: IconButton(
                                         icon: Image.asset("assets/meeting.png"),
                                         onPressed: () {
-                                          // Navigator.push(
-                                          //   context,
-                                          //   MaterialPageRoute(builder: (context) => OfferScreen()),
-                                          // );
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(builder: (context) => BookingMeetings()),
+                                          );
                                         },
                                       ),
                                     ),
@@ -169,10 +173,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
                                       child: IconButton(
                                         icon: Image.asset("assets/events.png"),
                                         onPressed: () {
-                                          // Navigator.push(
-                                          //   context,
-                                          //   MaterialPageRoute(builder: (context) => OfferScreen()),
-                                          // );
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(builder: (context) => EventsScreen()),
+                                          );
                                         },
                                       ),
                                     ),
@@ -216,10 +220,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
                                       child: IconButton(
                                         icon: Image.asset("assets/card.png"),
                                         onPressed: () {
-                                          // Navigator.push(
-                                          //   context,
-                                          //   MaterialPageRoute(builder: (context) => OfferScreen()),
-                                          // );
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(builder: (context) => CardScreen()),
+                                          );
                                         },
                                       ),
                                     ),
@@ -248,10 +252,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                             width: 325,
                             child: InkWell(
                               onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => LifeStylePage()));
+
                               },
                               child: Container(
                                 margin: EdgeInsets.only(left: 10),
@@ -265,7 +266,12 @@ class _ExploreScreenState extends State<ExploreScreen> {
                                     Container(
                                       child: IconButton(
                                         icon: Image.asset("assets/life.png"),
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) => LifeStylePage()));
+                                        },
                                       ),
                                     ),
                                   ],
